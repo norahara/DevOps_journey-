@@ -52,3 +52,5 @@ Faylning o‘zi EMAS, balki uning tavsifi.
 
     - Disk quotalarini sozlash
 
+Disk quotalarini o`rnatish uchun /etc/fstab fayliga o'zgartirish va qo'shimchalar qo'shiladi
+
