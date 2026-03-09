@@ -50,3 +50,17 @@ ssh -i "fayl-nomi.pem" ubuntu@dns-nomi
 
 ```
    ![image](./images/T6.png)
+
+
+- ushbu serverda telegram botni doimi ishga tushurish
+
+   > bot.py faylini quyidagi buyruq bilan ishga tushirganda bot doimiy ishlab turadi
+
+```
+# Virtual muhitni faollashtirish
+cd ~
+source mybotenv/bin/activate
+
+# Botni nohup bilan ishga tushirish
+nohup python bot.py > bot.log 2>&1 &
+```
