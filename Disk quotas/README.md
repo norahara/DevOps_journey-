@@ -52,5 +52,33 @@ Faylning o‘zi EMAS, balki uning tavsifi.
 
     - Disk quotalarini sozlash
 
-Disk quotalarini o`rnatish uchun /etc/fstab fayliga o'zgartirish va qo'shimchalar qo'shiladi
+Disk quotalarini o`rnatish uchun /etc/fstab fayliga o'zgartirish va qo'shimchalar qo'shiladi Undan oldin bir nechta amallar bajarilishi kerak 
 
+  Men bu o`rganishim davomida quyidagi vazifalarni bajardim bular:
+  - logic volume lar bilan ishlash
+  - file systemni disklarga ajratish
+  - /var /home kabi fayllarni alohida disklarga ajratish
+  - disk quotalarni tayinlash 
+  - userlarga diskdan foydalanish uchun cheklov o`rnatish
+
+  filesystem ni o`rganish jarayoni shularni tajriba qilib ko'rdim
+
+### logic volume lar bilan ishlash
+  - Diskni tekshirish
+
+  ![image](./images/T13.jpg) 
+
+  - /var katalogi uchun 5g disk ajratish quyidagi buyruq orqali
+
+  > lvcreate -L 5G -n var_lv ubuntu-vg
+
+  ![image](./images/T14.jpg) 
+
+  - filesystem  berish uchun: 
+  > mkfs.ext4 /dev/ubuntu-vg/var_lv
+
+  ![image](./images/T15.png)
+
+  - yangi diskni vaqtinchalik katalogga mount qilish bu /var katalogini ustiga yozilib ma'lumotlar o'chib ketishini oldini oladi.
+
+  ![alt text](./images/T16.png) 
